@@ -17,7 +17,8 @@ body {
     font-weight: 300;
 }
 
-body, input {
+body,
+input {
     font-family: 'Teko', sans-serif;
 }
 
@@ -40,7 +41,7 @@ main {
 .robo {
     height: 100%;
     z-index: 1;
-    position: absolute;
+    position: flex;
     left: -20%;
     top: -5%;
 }
@@ -55,14 +56,13 @@ main {
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    color: rgba(255,255,255,0.8)
+    color: rgba(255, 255, 255, 0.8)
 }
 
 .box {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
-    height: 90%;
 }
 
 /****************************** Equipamentos *****/
@@ -72,11 +72,12 @@ main {
 }
 
 .montador {
-    height: 100%;;
+    height: 100%;
+    ;
 }
 
 .montador-conteudo {
-    padding: 2em 10%;
+    padding: 4em 10%;
 }
 
 .peca {
@@ -210,9 +211,10 @@ main {
 }
 
 @media screen and (max-width: 1600px) {
-    body { 
+    body {
         font-size: 14px;
     }
+
     main {
         width: 90vw;
         height: 80vh;
@@ -221,7 +223,7 @@ main {
 }
 
 @media screen and (max-width: 1200px) {
-    body { 
+    body {
         font-size: 13px;
     }
 
@@ -229,5 +231,71 @@ main {
         width: 96vw;
         height: 80vh;
         margin: 10vh auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 13px;
+    }
+
+    main {
+        width: 96vw;
+        height: 80vh;
+        margin: 10vh auto;
+        display: table;
+        flex-direction: column;
+    }
+
+    .robotron {
+        display: flex;
+        flex-direction: row; 
+    }
+
+    .titulo{
+        margin-left: 50px;
+    }
+
+    .robo {
+        margin-left: 90px;
+    }
+
+    section {
+        height: 50vh;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    
+    #campoDados {
+        padding: 1px 1px 1px 1px;
+        height: 75vh;
+    }
+
+    .estatistica {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #campoDados .estatistica-valor {
+        flex-basis: 60%;
+        position: relative;
+        margin: 5px 0 0;
+        order: 2;
+        margin: -5px 0 0;
+    }
+    
+    #campoDados .estatistica-valor::after {
+        content: "";
+        padding-bottom: 50%;
+        border: 1px solid var(--main-cinza);
+        border-radius: 50%;
+    }
+
+    #campoDados .estatistica-titulo {
+        font-size: 1.5em;
+        border-bottom: 1px solid var(--main-cinza);
+        flex-basis: 40%;
+        text-transform: uppercase;
+        order: 1
     }
 }
