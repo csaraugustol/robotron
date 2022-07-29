@@ -234,7 +234,7 @@ main {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     body {
         font-size: 13px;
     }
@@ -243,6 +243,7 @@ main {
         width: 96vw;
         height: 80vh;
         margin: 10vh auto;
+        margin-top: 100px;
         display: table;
         flex-direction: column;
     }
@@ -252,12 +253,12 @@ main {
         flex-direction: row; 
     }
 
-    .titulo{
+    #titulo-robo .titulo{
         margin-left: 50px;
     }
 
     .robo {
-        margin-left: 90px;
+        margin-left: 100px;
     }
 
     section {
@@ -286,7 +287,7 @@ main {
     
     #campoDados .estatistica-valor::after {
         content: "";
-        padding-bottom: 50%;
+        padding-bottom: 45%;
         border: 1px solid var(--main-cinza);
         border-radius: 50%;
     }
